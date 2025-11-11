@@ -145,37 +145,68 @@
 
             <div class="highlight">
                 <p><strong><span class="emoji">✨</span> Privacy-First Approach</strong></p>
-                <p>Wavely is designed with privacy at its core. Your health and hydration data stays on YOUR device. We don't collect, store, or transmit any of your personal information or health data.</p>
+                <p>Wavely is designed with privacy at its core. Your health and wellness data stays under YOUR control. We use Apple's secure iCloud to sync your data across your devices, but we never collect, analyze, or sell your personal information.</p>
             </div>
 
             <h2>Information We DON'T Collect</h2>
             <p>We take pride in what we don't do:</p>
             <ul>
-                <li><strong>No personal information</strong> - We don't collect your name, email, phone number, or any identifying information</li>
-                <li><strong>No health data</strong> - Your water intake, fasting records, and health statistics never leave your device</li>
-                <li><strong>No usage analytics</strong> - We don't track how you use the app</li>
+                <li><strong>No personal information</strong> - We don't collect your name, email, phone number, or any identifying information beyond what Apple provides for purchase verification</li>
+                <li><strong>No usage analytics</strong> - We don't track how you use the app or what features you access</li>
                 <li><strong>No advertising data</strong> - We don't serve ads or collect advertising identifiers</li>
                 <li><strong>No location data</strong> - We don't access or collect your location</li>
-                <li><strong>No user accounts</strong> - We don't create accounts or require sign-ups</li>
+                <li><strong>No third-party tracking</strong> - We don't use analytics services, crash reporters, or any third-party tracking tools</li>
+                <li><strong>No selling of data</strong> - We never sell, rent, or share your data with third parties</li>
             </ul>
 
-            <h2>How Wavely Works</h2>
-            <p>Wavely stores everything locally on your device:</p>
+            <h2>What Data We Store</h2>
+            <p>Wavely stores wellness data that you create while using the app. All data is stored locally on your device and optionally synced to your private iCloud account:</p>
             <ul>
-                <li>When you log water intake, it's saved only to your iPhone's local storage</li>
-                <li>Your hydration goals, streaks, and history stay on your device</li>
-                <li>Fasting timers and records are stored locally</li>
-                <li>No internet connection is required to use any core features</li>
-                <li>All data is stored using Apple's secure UserDefaults framework</li>
+                <li><strong>Water intake entries</strong> - Date, time, amount, and unit of measurement for each water entry you log</li>
+                <li><strong>Hydration goals</strong> - Your custom daily water goal and preferred measurement unit (mL or oz)</li>
+                <li><strong>Fasting records</strong> - Start/end times, duration, target duration, and completion status of water fasts</li>
+                <li><strong>Breathwork sessions</strong> - Date, exercise type, duration, and completion status</li>
+                <li><strong>Meditation sessions</strong> - Date, duration, ambient sound selection, and completion status</li>
+                <li><strong>Journal reflections</strong> - Mood, notes, session type, session name, and duration for sessions you reflect on</li>
+                <li><strong>Streaks and statistics</strong> - Current streak count, longest streak, last check-in date, and cumulative stats</li>
+                <li><strong>Profile information</strong> - Optional display name and profile image you choose to set</li>
+                <li><strong>App preferences</strong> - Settings like notification preferences, reminder times, quiet hours, and onboarding completion status</li>
+                <li><strong>Purchase status</strong> - Whether premium features are unlocked via in-app purchase</li>
+            </ul>
+
+            <h2>How We Store Your Data</h2>
+            <p>Wavely uses a two-tier storage approach for maximum privacy and reliability:</p>
+            <ul>
+                <li><strong>Local Storage:</strong> All data is first saved locally on your device using Apple's secure UserDefaults framework</li>
+                <li><strong>iCloud Sync (Optional):</strong> Your data automatically syncs to your private iCloud account using Apple's CloudKit framework</li>
+                <li>You can use Wavely completely offline - internet connection is only needed for iCloud sync</li>
+                <li>All iCloud data is stored in YOUR personal iCloud account, not on our servers</li>
+                <li>We don't have access to your iCloud data - only your devices can read it</li>
+                <li>iCloud data is encrypted in transit and at rest by Apple</li>
+            </ul>
+
+            <h2>iCloud Sync & Privacy</h2>
+            <p>Wavely uses Apple's CloudKit to sync your data across your devices:</p>
+            <ul>
+                <li>CloudKit stores data in YOUR private iCloud account, not on our servers</li>
+                <li>Only devices signed into your Apple ID can access your synced data</li>
+                <li>We cannot access, view, or retrieve your iCloud data</li>
+                <li>CloudKit sync happens automatically in the background when you have an internet connection</li>
+                <li>Your data syncs across all devices logged into the same Apple ID</li>
+                <li>If you disable iCloud for Wavely in iOS Settings, data will only be stored locally</li>
+                <li>iCloud storage counts toward your personal iCloud storage quota (typically a few KB)</li>
             </ul>
 
             <h2>Notifications</h2>
-            <p>Wavely uses local notifications for hydration reminders:</p>
+            <p>Wavely uses local notifications for wellness reminders:</p>
             <ul>
                 <li>All notifications are scheduled and delivered locally on your device</li>
+                <li>You can enable custom reminder times and hourly reminders</li>
+                <li>Quiet hours (9PM-7AM) can be enabled to silence notifications during sleep</li>
                 <li>We do not collect or transmit any notification data</li>
-                <li>You can enable/disable reminders anytime in Settings</li>
+                <li>You can enable/disable reminders anytime in the Reminders screen</li>
                 <li>Notification permissions are managed by iOS</li>
+                <li>Notifications include motivational messages and goal achievement celebrations</li>
             </ul>
 
             <h2>In-App Purchases</h2>
@@ -185,40 +216,36 @@
                 <li>We do not collect or store payment information</li>
                 <li>Purchase history is managed by Apple and synced via your Apple ID</li>
                 <li>We only receive confirmation that a purchase was made (no payment details)</li>
-                <li>All payment tiers unlock the exact same features</li>
-            </ul>
-
-            <h2>Data Storage</h2>
-            <p>The only data stored on your device includes:</p>
-            <ul>
-                <li><strong>Water intake entries</strong> - Date, time, and amount you logged</li>
-                <li><strong>Hydration goals</strong> - Your custom daily water goal</li>
-                <li><strong>Fasting records</strong> - Start/end times and duration of water fasts</li>
-                <li><strong>Streaks and statistics</strong> - Your progress and achievements</li>
-                <li><strong>App preferences</strong> - Settings like reminder times and measurement units</li>
-                <li><strong>Purchase status</strong> - Whether premium features are unlocked</li>
-            </ul>
-            <p>This data is stored locally using Apple's secure storage mechanisms and is never transmitted to external servers.</p>
-
-            <h2>Cross-Device Sync</h2>
-            <p>Currently, Wavely does not sync data between devices:</p>
-            <ul>
-                <li>Each device maintains its own local data</li>
-                <li>Purchase information syncs via Apple's StoreKit framework only</li>
-                <li>Your premium status will sync across devices signed into the same Apple ID</li>
-                <li>Health data (water logs, fasts, streaks) remains device-specific</li>
+                <li>All payment tiers unlock the exact same features - you choose what to pay</li>
+                <li>Premium features include: extended fasting presets, custom fasting durations, streak recovery, and future premium content</li>
+                <li>Your premium status automatically syncs across all devices signed into your Apple ID</li>
             </ul>
 
             <h2>Third-Party Services</h2>
-            <p>Wavely does not use any third-party services for:</p>
+            <p>Wavely uses minimal third-party services:</p>
             <ul>
-                <li>Analytics</li>
-                <li>Advertising</li>
-                <li>Crash reporting</li>
-                <li>Cloud storage</li>
-                <li>User tracking</li>
+                <li><strong>Apple CloudKit:</strong> For secure, private iCloud sync (stored in YOUR iCloud account only)</li>
+                <li><strong>Apple StoreKit:</strong> For processing in-app purchases (required by Apple)</li>
             </ul>
-            <p>The only third-party service we use is Apple's StoreKit for processing in-app purchases, which is a required part of the iOS ecosystem.</p>
+            <p>Wavely does NOT use any third-party services for:</p>
+            <ul>
+                <li>Analytics or usage tracking</li>
+                <li>Advertising or ad networks</li>
+                <li>Crash reporting or error tracking</li>
+                <li>User behavior analysis</li>
+                <li>Social media integrations</li>
+                <li>External cloud storage</li>
+            </ul>
+
+            <h2>Sharing Features</h2>
+            <p>Wavely includes optional sharing functionality:</p>
+            <ul>
+                <li>You can share your progress via iOS's native share sheet</li>
+                <li>Shared content is generated locally and only sent if you actively choose to share</li>
+                <li>We don't track what you share or where you share it</li>
+                <li>Sharing uses iOS's secure sharing mechanisms</li>
+                <li>No data is sent to Wavely or any third-party services when you share</li>
+            </ul>
 
             <h2>Apple Health Integration</h2>
             <p>Wavely does not currently integrate with Apple Health:</p>
@@ -226,54 +253,119 @@
                 <li>We do not read from or write to the Health app</li>
                 <li>All data tracking happens within Wavely only</li>
                 <li>Future versions may add optional Health integration with your explicit permission</li>
+                <li>If Health integration is added, you will have full control over what data is shared</li>
+            </ul>
+
+            <h2>Widgets & Lock Screen</h2>
+            <p>Wavely provides home screen and lock screen widgets:</p>
+            <ul>
+                <li>Widgets display your water intake progress and quick stats</li>
+                <li>Widget data is read from your local device storage</li>
+                <li>Widgets use iOS's secure WidgetKit framework</li>
+                <li>No widget data is transmitted to external servers</li>
+                <li>Widgets update automatically when you log water in the app</li>
             </ul>
 
             <h2>Children's Privacy</h2>
-            <p>Wavely does not knowingly collect any information from children. The app is designed to be privacy-friendly for users of all ages. Since we don't collect any data, users of any age can safely use Wavely.</p>
+            <p>Wavely is suitable for users of all ages and complies with COPPA (Children's Online Privacy Protection Act):</p>
+            <ul>
+                <li>We do not knowingly collect personal information from children</li>
+                <li>Since we don't collect user data, children can safely use Wavely</li>
+                <li>No account creation or parental consent is required</li>
+                <li>All data stays on the user's device or their private iCloud</li>
+                <li>Parents have full visibility into app usage through iOS parental controls</li>
+            </ul>
 
             <h2>Data Deletion</h2>
             <p>You have complete control over your data:</p>
             <ul>
-                <li>Delete individual water entries or fasting records anytime</li>
+                <li>Delete individual water entries, fasts, sessions, or journal reflections anytime within the app</li>
                 <li>Reset all data in Settings if you want to start fresh</li>
                 <li>Deleting the app removes all local data permanently</li>
-                <li>Since we don't store any data on servers, there's nothing to request deletion of</li>
+                <li>To delete iCloud synced data: delete the app, then go to iOS Settings > [Your Name] > iCloud > Manage Storage > Wavely > Delete Data</li>
+                <li>Since we don't store any data on our servers, there's nothing to request deletion from us</li>
+                <li>All your data is exclusively in your control through your device and iCloud account</li>
             </ul>
 
             <h2>Security</h2>
             <p>We implement security best practices:</p>
             <ul>
-                <li>All data is stored using Apple's secure UserDefaults framework</li>
-                <li>No data is transmitted over the network</li>
+                <li>All local data is stored using Apple's secure UserDefaults framework</li>
+                <li>iCloud data is encrypted in transit and at rest by Apple</li>
                 <li>The app runs in Apple's secure iOS sandbox environment</li>
                 <li>Purchase validation uses Apple's StoreKit security features</li>
+                <li>No user authentication or passwords are required (reducing attack surface)</li>
+                <li>All network connections (for iCloud sync) use Apple's secure APIs</li>
+                <li>We follow Apple's security guidelines and best practices</li>
             </ul>
 
-            <h2>Your Rights</h2>
-            <p>Since we don't collect any personal data, there's nothing for us to delete, export, or modify. You have complete control:</p>
+            <h2>Your Rights (GDPR & CCPA Compliance)</h2>
+            <p>Wavely respects your privacy rights under GDPR, CCPA, and other privacy laws:</p>
             <ul>
-                <li>View all your data within the app anytime</li>
-                <li>Delete entries or reset data in Settings</li>
-                <li>Delete the app to remove all local data</li>
-                <li>Restore purchases on any device signed into your Apple ID</li>
+                <li><strong>Right to Access:</strong> View all your data within the app anytime - there are no hidden data collections</li>
+                <li><strong>Right to Deletion:</strong> Delete any or all data within the app or by deleting the app entirely</li>
+                <li><strong>Right to Portability:</strong> Your data is stored in standard formats on your device (accessible via iOS backups)</li>
+                <li><strong>Right to Opt-Out:</strong> Disable iCloud sync in iOS Settings to keep all data local-only</li>
+                <li><strong>No Sale of Data:</strong> We never sell your data to third parties</li>
+                <li><strong>No Profiling:</strong> We don't create profiles or make automated decisions based on your data</li>
+            </ul>
+            <p>Since all your data is stored in your personal device and iCloud account (not our servers), you have complete control at all times.</p>
+
+            <h2>Data Retention</h2>
+            <p>Your data is retained based on your preferences:</p>
+            <ul>
+                <li>Data is stored indefinitely until you choose to delete it</li>
+                <li>No automatic data deletion or expiration</li>
+                <li>Historical data (old water entries, past fasts, journal entries) remains accessible unless you delete it</li>
+                <li>Deleted data is immediately removed from local storage</li>
+                <li>Deleted data is removed from iCloud during the next sync (may take a few minutes)</li>
+                <li>We don't have backup copies of your data on our servers</li>
+            </ul>
+
+            <h2>International Data Transfers</h2>
+            <p>Since Wavely uses Apple's infrastructure:</p>
+            <ul>
+                <li>iCloud data may be stored in Apple data centers in various countries</li>
+                <li>Apple complies with international data protection laws</li>
+                <li>Your data is subject to Apple's privacy policies and data handling practices</li>
+                <li>We never transfer your data internationally ourselves</li>
             </ul>
 
             <h2>Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. Any changes will be posted here with an updated "Last Updated" date. We encourage you to review this policy periodically. Significant changes will be communicated through app updates.</p>
+            <p>We may update this Privacy Policy from time to time:</p>
+            <ul>
+                <li>Changes will be posted here with an updated "Last Updated" date</li>
+                <li>Significant changes will be communicated through app updates</li>
+                <li>Continued use of the app after changes constitutes acceptance</li>
+                <li>We encourage you to review this policy periodically</li>
+                <li>You can always access the latest version at this URL</li>
+            </ul>
 
             <h2>Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy or Wavely's privacy practices, please contact us at:</p>
+            <p>If you have any questions about this Privacy Policy, Wavely's privacy practices, or want to exercise your privacy rights, please contact us:</p>
             <p><strong>Email:</strong> <a href="mailto:lamplough.alex+wavely@gmail.com">lamplough.alex+wavely@gmail.com</a></p>
+            <p>We will respond to privacy inquiries within 30 days.</p>
+
+            <h2>Legal Compliance</h2>
+            <p>Wavely complies with:</p>
+            <ul>
+                <li>General Data Protection Regulation (GDPR) - EU</li>
+                <li>California Consumer Privacy Act (CCPA) - US</li>
+                <li>Children's Online Privacy Protection Act (COPPA) - US</li>
+                <li>Apple App Store Guidelines</li>
+                <li>iOS Privacy Requirements</li>
+            </ul>
 
             <div class="highlight">
                 <p><strong><span class="emoji">🛡️</span> Our Promise</strong></p>
-                <p>We built Wavely to help people stay healthy and hydrated. Your health data is personal and should stay that way. That's why everything stays on YOUR device, under YOUR control. Always.</p>
+                <p>We built Wavely to help people stay healthy, hydrated, and mindful. Your health data is deeply personal and should stay that way. That's why everything stays on YOUR device and YOUR iCloud account, under YOUR control. We can't access your data, we don't track your usage, and we'll never sell your information. Your wellness journey is yours alone. Always.</p>
             </div>
         </div>
 
         <div class="footer">
             <p>&copy; 2025 Wavely. All rights reserved.</p>
             <p>Made with care for your health and privacy 💧</p>
+            <p><a href="support.html">Support & FAQ</a></p>
         </div>
     </div>
 </body>
